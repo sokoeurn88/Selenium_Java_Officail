@@ -4,6 +4,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxOptions;
 
 public class Firefox_WebDriver_Using {
 
@@ -11,10 +12,14 @@ public class Firefox_WebDriver_Using {
 		
 		System.setProperty("webdirver.gecko.driver", "./"+"\\Drivers\\geckodriver.exe"); /*./ is current working directory*/
 		
+		/*Making FirefoxDriver headless*/
+		FirefoxOptions options = new FirefoxOptions();
+//		options.setHeadless(true);
+		options.addArguments("--headless");
+		
 //		FirefoxDriver driver = new FirefoxDriver(); /*This one is only used with FirefoxDriver. it can't instantiate with other Drivers. eg ChromeDriver(),*/
 		
-		WebDriver  driver = new FirefoxDriver(); /*it is a generic way. WebDriver is an Interface. FirefoxDriver is a class implement WebDriver */
-		
+		WebDriver  driver = new FirefoxDriver(options); /*it is a generic way. WebDriver is an Interface. FirefoxDriver is a class implement WebDriver */
 		driver.manage().window().maximize();
 		
 //		driver.get("https://www.google.com");

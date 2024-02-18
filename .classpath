@@ -7,5 +7,6 @@
 	</classpathentry>
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/selenium-jar1"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/htmlunit_driver"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
