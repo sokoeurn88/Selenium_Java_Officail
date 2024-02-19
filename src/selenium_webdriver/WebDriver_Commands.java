@@ -10,14 +10,16 @@ public class WebDriver_Commands {
 		
 		System.setProperty("webdriver.chrome.driver", ".\\Drivers\\chromedriver.exe");
 		WebDriver driver = new ChromeDriver();
-		
+		driver.manage().window().maximize();
 		driver.get("https://www.google.com");
+		
 		System.out.println(driver.getCurrentUrl());
 		System.out.println(driver.getTitle());
 		
-		String webText = driver.findElement(By.name("btnK")).getText();
-		System.out.println(webText);
+		String textElement = driver.findElement(By.xpath("//a[contains(text(), 'Gmail')]")).getText();
+		System.out.println(textElement);
 		
+		driver.quit();
 
 	}
 
