@@ -1,6 +1,7 @@
 package selenium_webdriver;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 import org.openqa.selenium.By;
@@ -34,7 +35,26 @@ public class Sort_Dropdown {
 		}
 		
 		System.out.println(originallist);
-
-	}
+		
+		List templist = new ArrayList();
+		
+		templist = originallist;
+		
+		System.out.println("Before sorting templist:"+ templist);
+		
+		Collections.sort(templist);
+		
+		System.out.println("After sorting the templist:"+templist);
+		
+		if(originallist == templist) {
+			System.out.println("Dropdown is sorted");
+		} else {
+			System.out.println("Dropdown is not sorted");
+		}
+		
+		driver.close();
+		
+		
+		}
 
 }
