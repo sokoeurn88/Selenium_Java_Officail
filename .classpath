@@ -9,5 +9,6 @@
 	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/selenium-jar1"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/htmlunit_driver"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/Apache-POI-jar"/>
+	<classpathentry kind="lib" path="C:/Users/sokoeurn chhay/eclipse-workspace2024Feb/sikulixide-2.0.5-win.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
