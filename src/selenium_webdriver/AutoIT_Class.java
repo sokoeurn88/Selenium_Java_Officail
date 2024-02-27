@@ -5,6 +5,7 @@ import java.io.IOException;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
 public class AutoIT_Class {
@@ -49,15 +50,23 @@ public class AutoIT_Class {
 		driver.findElement(By.xpath("/html/body/div[5]/div/div[12]/div/div[2]/div[2]/div/div/div[1]/div/div/div[1]/div/div/span/a/h3")).click();
 		Thread.sleep(3000);
 		
-		driver.findElement(By.xpath("//*[@name='upfile']")).click();
-
+		WebElement browseButton = driver.findElement(By.xpath("//*[@name='upfile']"));
 		
-		Runtime.getRuntime().exec("\"C:\\Users\\sokoeurn chhay\\OneDrive\\Desktop\\FileUploadPDF.au3\"");
+		
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		
+		js.executeScript("arguments[0].click()", browseButton);
+		
+		
+		
+		Thread.sleep(3000);
+		Runtime.getRuntime().exec("C:\\Users\\sokoeurn chhay\\OneDrive\\Desktop\\FileUploadPDF.exe");
+		Thread.sleep(3000);
 		
 		driver.findElement(By.xpath("/html/body/form/input[3]")).click();
 		
 		
-		driver.quit();
+//		driver.quit();
 	}
 
 }
