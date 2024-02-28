@@ -26,8 +26,14 @@ public class Cookies {
 		System.out.println(driver.manage().getCookieNamed("fr"));
 		
 		/*Add a cookies*/
-		Cookie cookObj = new Cookie("sccookies", "chhay123456");
+		Cookie cookObj = new Cookie("sc", "chhay123456");
 		driver.manage().addCookie(cookObj);
+		
+		cookies = driver.manage().getCookies(); /*every time operations apply to cookies, must getCookies in order to get cookies working*/
+		
+		driver.manage().deleteCookieNamed("sb");
+		driver.manage().deleteAllCookies();
+		cookies = driver.manage().getCookies();
 		
 		for(Cookie cookieVariable : cookies) {
 			
