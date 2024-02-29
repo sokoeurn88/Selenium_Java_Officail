@@ -10,5 +10,10 @@
 	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/htmlunit_driver"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/Apache-POI-jar"/>
 	<classpathentry kind="lib" path="C:/Users/sokoeurn chhay/eclipse-workspace2024Feb/sikulixide-2.0.5-win.jar"/>
+	<classpathentry kind="lib" path="C:/Users/sokoeurn chhay/eclipse-workspace2024Feb/ashot-1.5.3.jar"/>
+	<classpathentry kind="lib" path="C:/Users/sokoeurn chhay/eclipse-workspace2024Feb/gson-2.8.5.jar"/>
+	<classpathentry kind="lib" path="C:/Users/sokoeurn chhay/eclipse-workspace2024Feb/hamcrest-all-1.3.jar"/>
+	<classpathentry kind="lib" path="C:/Users/sokoeurn chhay/eclipse-workspace2024Feb/core-3.5.2.jar"/>
+	<classpathentry kind="lib" path="C:/Users/sokoeurn chhay/eclipse-workspace2024Feb/javase-3.5.2.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
