@@ -17,5 +17,7 @@
 	<classpathentry kind="lib" path="C:/Users/sokoeurn chhay/eclipse-workspace2024Feb/javase-3.5.2.jar"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/jdbc_database"/>
 	<classpathentry kind="lib" path="C:/Users/sokoeurn chhay/eclipse-workspace2024Feb/monte-screen-recorder-0.7.7.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/sokoeurn chhay/eclipse-workspace2024Feb/webdrivermanager-5.6.3 (1).jar"/>
+	<classpathentry kind="lib" path="C:/Users/sokoeurn chhay/eclipse-workspace2024Feb/commons-io-2.15.0.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
