@@ -1,12 +1,14 @@
 package selenium_webdriver;
 
+import java.util.Optional;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.devtools.DevTools;
+import org.openqa.selenium.devtools.v85.emulation.Emulation;
 
-import com.google.common.collect.ImmutableMap;
-
-public class DevTools_Geolocation {
+public class DevTools_Geolocation2 {
 
 	
 	public static void main(String[] args ) {
@@ -17,27 +19,20 @@ public class DevTools_Geolocation {
 		driver.manage().window().maximize();
 		driver.get("https://the-internet.herokuapp.com/geolocation");
 
-
 		//https://www.google.com/maps/place/Phnom+Penh,+Cambodia/@11.579654,104.7253719,11z/data=!3m1!4b1!4m6!3m5!1s0x3109513dc76a6be3:0x9c010ee85ab525bb!8m2!3d11.5563738!4d104.9282099!16zL20vMGRsd2o?entry=ttu
 		//11.579654,104.7253719
 		
-		//update geo location
-		ImmutableMap.Builder<String, Object> params = ImmutableMap.builder();
+		DevTools devTools = ((ChromeDriver)driver).getDevTools();
 		
-		params.put("latitude", 11.579654);
-		params.put("longtitude", 104.7253719);
-		params.put("accuracy", 100);
+		devTools.createSession();
 		
-		//this piece of code below is not working right now. need more implementation
-		
-		//casting the chrome driver
-		((ChromeDriver)driver).executeCdpCommand("Emulation.setGeolocationOverride", params.build());
-		
-		
+		devTools.send(Emulation.setGeolocationOverride(Optional.of(11.579654), Optional.of(104.7253719), Optional.of(100)));
+	
 		
 		driver.findElement(By.xpath("//button[contains(text(), 'Where am I?')]")).click();
+		driver.findElement(By.xpath("//div[@id='map-link']/a")).click();
 		
-//		driver.quit();
+		driver.quit();
 	}
 
 }
