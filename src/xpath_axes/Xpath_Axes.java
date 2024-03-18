@@ -45,6 +45,7 @@ public class Xpath_Axes {
 		
 		//Example3: /child::      note: because current node does not have child. it needs to travel to ancestor node to get child element
 		driver.findElement(By.xpath("//a[contains(text(), 'India Tourism De)]/ancestor::tr/child::td"));
+		driver.findElement(By.xpath("//a[contains(text(), 'India Tourism De)]/child::div[10]/button"));
 		
 		//Example4: /ancestor::     
 		driver.findElement(By.xpath("//a[contains(text(), 'India Tourism De)]/ancestor::tr"));
